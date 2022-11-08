@@ -16,5 +16,15 @@ namespace Hotel_Management_System
         {
             InitializeComponent();
         }
+
+        private void manageResevationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Main_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

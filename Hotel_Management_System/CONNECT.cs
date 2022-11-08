@@ -13,10 +13,15 @@ namespace Hotel_Management_System
      */
     internal class CONNECT
     {
-        private MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=");
+        private MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=Hotel_Management_DB");
 
 
-        //function to pen connetion
+        public MySqlConnection getConnection()
+        {
+            return connection;
+        }
+
+        //function to open connetion
 
         public void openConnection()
         {

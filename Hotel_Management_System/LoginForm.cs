@@ -27,7 +27,7 @@ namespace Hotel_Management_System
             string query = "SELECT * FROM `users` WHERE`username`=@usn AND `password`=@pass";
 
             command.CommandText = query;
-            command.Connection = conn.GetConnection;
+            command.Connection = conn.getConnection();
 
             command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = textBoxUserName.Text;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBoxPassword.Text;
@@ -35,14 +35,28 @@ namespace Hotel_Management_System
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
-            if(table.Rows.Count > 0)
+            if (table.Rows.Count > 0)
             {
-                MessageBox.Show("YES");
+                this.Hide();
+                Main_Form mform = new Main_Form();
+                mform.Show();
             }
             else
             {
-                MessageBox.Show("NO");
+                if (textBoxUserName.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Enter Your Username to Login", "Empty Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (textBoxPassword.Text.Trim().Equals(""))
+                {
+                    MessageBox.Show("Enter Your Password to Login", "Empty Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("This Username Or Password Doesn't Exists", "Wrong Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+
         }
     }
 }

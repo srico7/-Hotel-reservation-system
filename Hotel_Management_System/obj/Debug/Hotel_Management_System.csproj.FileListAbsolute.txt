@@ -44,3 +44,6 @@ C:\Users\chath\Documents\GitHub\-Hotel-reservation-system\Hotel_Management_Syste
 C:\Users\chath\Documents\GitHub\-Hotel-reservation-system\Hotel_Management_System\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\chath\Documents\GitHub\-Hotel-reservation-system\Hotel_Management_System\obj\Debug\Hotel_Management_System.csproj.CopyComplete
 C:\Users\chath\Documents\GitHub\-Hotel-reservation-system\Hotel_Management_System\obj\Debug\Hotel_Management_System.Main_Form.resources
+C:\Users\chath\Documents\GitHub\-Hotel-reservation-system\Hotel_Management_System\obj\Debug\Hotel_Management_System.ManageClientsForm.resources
+C:\Users\chath\Documents\GitHub\-Hotel-reservation-system\Hotel_Management_System\obj\Debug\Hotel_Management_System.ManageReservationsForm.resources
+C:\Users\chath\Documents\GitHub\-Hotel-reservation-system\Hotel_Management_System\obj\Debug\Hotel_Management_System.ManageRoomsForm.resources

@@ -19,12 +19,27 @@ namespace Hotel_Management_System
 
         private void manageResevationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ManageReservationsForm manageRSF = new ManageReservationsForm();
+            manageRSF.Show();
         }
 
         private void Main_Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+
+
+        private void manageCLientsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageClientsForm manageCF = new ManageClientsForm();
+            manageCF.Show();
+        }
+
+        private void manageRoomsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageRoomsForm manageRF = new ManageRoomsForm();
+            manageRF.Show();
         }
     }
 }

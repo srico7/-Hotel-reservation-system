@@ -50,8 +50,9 @@
             // manageCLientsToolStripMenuItem
             // 
             this.manageCLientsToolStripMenuItem.Name = "manageCLientsToolStripMenuItem";
-            this.manageCLientsToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.manageCLientsToolStripMenuItem.Text = "Manage CLients";
+            this.manageCLientsToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.manageCLientsToolStripMenuItem.Text = "Manage Clients";
+            this.manageCLientsToolStripMenuItem.Click += new System.EventHandler(this.manageCLientsToolStripMenuItem_Click);
             // 
             // manageResevationsToolStripMenuItem
             // 
@@ -65,6 +66,7 @@
             this.manageRoomsToolStripMenuItem.Name = "manageRoomsToolStripMenuItem";
             this.manageRoomsToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.manageRoomsToolStripMenuItem.Text = "Manage Rooms";
+            this.manageRoomsToolStripMenuItem.Click += new System.EventHandler(this.manageRoomsToolStripMenuItem_Click);
             // 
             // Main_Form
             // 

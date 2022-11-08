@@ -1,0 +1,6 @@
+C:\Users\User\source\repos\Csharp_manage_rooms\Csharp_manage_rooms\obj\Debug\Csharp_manage_rooms.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Csharp_manage_rooms\Csharp_manage_rooms\obj\Debug\Csharp_manage_rooms.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\Csharp_manage_rooms\Csharp_manage_rooms\obj\Debug\Csharp_manage_rooms.Properties.Resources.resources
+C:\Users\User\source\repos\Csharp_manage_rooms\Csharp_manage_rooms\obj\Debug\Csharp_manage_rooms.Room_Manageform.resources
+C:\Users\User\source\repos\Csharp_manage_rooms\Csharp_manage_rooms\obj\Debug\Csharp_manage_rooms.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Csharp_manage_rooms\Csharp_manage_rooms\obj\Debug\Csharp_manage_rooms.csproj.CoreCompileInputs.cache

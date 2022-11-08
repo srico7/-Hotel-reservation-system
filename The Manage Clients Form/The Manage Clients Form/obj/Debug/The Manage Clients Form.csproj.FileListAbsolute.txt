@@ -1,0 +1,11 @@
+E:\NSBM Nethmi\Year02_Sem02\C#\The Manage Clients Form\The Manage Clients Form\bin\Debug\The Manage Clients Form.exe.config
+E:\NSBM Nethmi\Year02_Sem02\C#\The Manage Clients Form\The Manage Clients Form\bin\Debug\The Manage Clients Form.exe
+E:\NSBM Nethmi\Year02_Sem02\C#\The Manage Clients Form\The Manage Clients Form\bin\Debug\The Manage Clients Form.pdb
+E:\NSBM Nethmi\Year02_Sem02\C#\The Manage Clients Form\The Manage Clients Form\obj\Debug\The Manage Clients Form.csproj.AssemblyReference.cache
+E:\NSBM Nethmi\Year02_Sem02\C#\The Manage Clients Form\The Manage Clients Form\obj\Debug\The Manage Clients Form.csproj.SuggestedBindingRedirects.cache
+E:\NSBM Nethmi\Year02_Sem02\C#\The Manage Clients Form\The Manage Clients Form\obj\Debug\The_Manage_Clients_Form.Form1.resources
+E:\NSBM Nethmi\Year02_Sem02\C#\The Manage Clients Form\The Manage Clients Form\obj\Debug\The_Manage_Clients_Form.Properties.Resources.resources
+E:\NSBM Nethmi\Year02_Sem02\C#\The Manage Clients Form\The Manage Clients Form\obj\Debug\The Manage Clients Form.csproj.GenerateResource.cache
+E:\NSBM Nethmi\Year02_Sem02\C#\The Manage Clients Form\The Manage Clients Form\obj\Debug\The Manage Clients Form.csproj.CoreCompileInputs.cache
+E:\NSBM Nethmi\Year02_Sem02\C#\The Manage Clients Form\The Manage Clients Form\obj\Debug\The Manage Clients Form.exe
+E:\NSBM Nethmi\Year02_Sem02\C#\The Manage Clients Form\The Manage Clients Form\obj\Debug\The Manage Clients Form.pdb

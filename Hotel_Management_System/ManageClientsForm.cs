@@ -13,6 +13,7 @@ namespace Hotel_Management_System
     public partial class ManageClientsForm : Form
     {
         CLIENT client = new CLIENT();
+
         public ManageClientsForm()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace Hotel_Management_System
 
         private void ManageClientsForm_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = client.getClients();
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
@@ -34,22 +35,112 @@ namespace Hotel_Management_System
 
         private void buttonAddClient_Click(object sender, EventArgs e)
         {
-            string fname = textBoxFirstName.Text;
+            int id;
+            String fname = textBoxFirstName.Text;
             String lname = textBoxLastName.Text;
             String phone = textBoxPhone.Text;
-            string country = textBoxCountry.Text;
+            String country = textBoxCountry.Text;
 
-            Boolean insertClient = client.insertClient(fname, lname, phone, country);
+            if (fname.Trim().Equals("") || lname.Trim().Equals("") || phone.Trim().Equals(""))
+            {
+                MessageBox.Show("Required Fields - First & Last Name + Phone Number", "Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            if(insertClient)
-            {
-                MessageBox.Show("New CLient inserted Successfuly", "Add Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("ERROR - CLient Not inserted", "Add Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    Boolean insertClient = client.insertClient(fname, lname, phone, country);
+
+                    if (insertClient)
+                    {
+                        dataGridView1.DataSource = client.getClients();
+                        MessageBox.Show("New Client Inserted Successfuly", "Add Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR - Client Not Inserted", "Add Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
+                }
             }
         }
 
+        private void buttonEditClient_Click(object sender, EventArgs e)
+        {
+            {
+                int id;
+                String fname = textBoxFirstName.Text;
+                String lname = textBoxLastName.Text;
+                String phone = textBoxPhone.Text;
+                String country = textBoxCountry.Text;
+
+                try
+                {
+                    id = Convert.ToInt32(textBoxID.Text);
+
+                    if (fname.Trim().Equals("") || lname.Trim().Equals("") || phone.Trim().Equals(""))
+                    {
+                        MessageBox.Show("Required Fields - First & Last Name + Phone Number", "Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        Boolean insertClient = client.editClient(id, fname, lname, phone, country);
+
+                        if (insertClient)
+                        {
+                            dataGridView1.DataSource = client.getClients();
+                            MessageBox.Show("New Client Updated Successfuly", "Edit Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("ERROR - Client Not Updated", "Edit Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "ID Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void buttonRemoveClient_Click(object sender, EventArgs e)
+        {
+            {
+                try
+                {
+                    int id = Convert.ToInt32(textBoxID.Text);
+
+                    if (client.removeClient(id))
+                    {
+                        dataGridView1.DataSource = client.getClients();
+                        MessageBox.Show("Client Deleted Successfuly", "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // you can clear all textboxes after the delete if you want
+                        // by calling the clear button
+                        buttonClear.PerformClick();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR - Client Not Deleted", "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "ID Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textBoxFirstName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textBoxLastName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBoxPhone.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            textBoxCountry.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+
+        }
     }
 }

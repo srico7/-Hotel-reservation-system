@@ -35,8 +35,7 @@ namespace Hotel_Management_System
 
         private void buttonAddClient_Click(object sender, EventArgs e)
         {
-            int id;
-            String fname = textBoxFirstName.Text;
+            string fname = textBoxFirstName.Text;
             String lname = textBoxLastName.Text;
             String phone = textBoxPhone.Text;
             String country = textBoxCountry.Text;
@@ -44,23 +43,23 @@ namespace Hotel_Management_System
             if (fname.Trim().Equals("") || lname.Trim().Equals("") || phone.Trim().Equals(""))
             {
                 MessageBox.Show("Required Fields - First & Last Name + Phone Number", "Empty Fields", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                {
-                    Boolean insertClient = client.insertClient(fname, lname, phone, country);
-
-                    if (insertClient)
-                    {
-                        dataGridView1.DataSource = client.getClients();
-                        MessageBox.Show("New Client Inserted Successfuly", "Add Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("ERROR - Client Not Inserted", "Add Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
-
-                }
             }
+            else
+            {
+                Boolean insertClient = client.InsertClient(fname, lname, phone, country);
+
+                if (insertClient)
+                {
+                    dataGridView1.DataSource = client.getClients();
+                    MessageBox.Show("New Client Inserted Successfuly", "Add Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("ERROR - Client Not Inserted", "Add Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+
         }
 
         private void buttonEditClient_Click(object sender, EventArgs e)

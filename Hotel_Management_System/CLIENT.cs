@@ -14,7 +14,7 @@ namespace Hotel_Management_System
         CONNECT conn = new CONNECT();
 
         //new client function
-        public bool insertClient(String fname, String lname, String phone, String country)
+        public bool InsertClient(String fname, String lname, String phone, String country)
         {
             MySqlCommand command = new MySqlCommand();
             String insertQuery = "INSERT INTO `client`(`first_name`, `last_name`, `phone`, `country`) VALUES (@fnm,@lnm,@phn,@cnt)";

@@ -55,7 +55,7 @@ namespace Hotel_Management_System
             return table;
         }
 
-        //Function to edit data
+        //Function to edit client data
 
         public bool editClient(int id, String fname, String lname, String phone, String country)
         {
@@ -86,6 +86,7 @@ namespace Hotel_Management_System
             }
         }
 
+        //function to remove client
         public bool removeClient(int id)
         {
             MySqlCommand command = new MySqlCommand();

@@ -69,5 +69,61 @@ namespace Hotel_Management_System
 
             return table;
         }
+
+        //function to delete the selected room
+
+        public bool editRoom(int number, int type, String phone, String free)
+        {
+            MySqlCommand command = new MySqlCommand();
+            String editQuery = "UPDATE `rooms` SET `type`= @typ,`phone`= @phn,`free`= @fr WHERE `number`= @num";
+            command.CommandText = editQuery;
+            command.Connection = conn.getConnection();
+
+            // @num,@typ,@phn,@fr
+            command.Parameters.Add("@num", MySqlDbType.Int32).Value = number;
+            command.Parameters.Add("@typ", MySqlDbType.Int32).Value = type;
+            command.Parameters.Add("@phn", MySqlDbType.VarChar).Value = phone;
+            command.Parameters.Add("@fr", MySqlDbType.VarChar).Value = free;
+
+            conn.openConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                conn.closeConnection();
+                return true;
+            }
+
+            else
+            {
+                conn.closeConnection();
+                return false;
+            }
+        }
+
+        //function to remove a room
+
+        public bool removeRoom(int number)
+        {
+            MySqlCommand command = new MySqlCommand();
+            String removeQuery = "DELETE FROM `rooms` WHERE `number` =@num";
+            command.CommandText = removeQuery;
+            command.Connection = conn.getConnection();
+
+            //@num
+            command.Parameters.Add("@num", MySqlDbType.Int32).Value = number;
+
+            conn.openConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                conn.closeConnection();
+                return true;
+            }
+            else
+            {
+                conn.closeConnection();
+                return false;
+            }
+        }
     }
 }

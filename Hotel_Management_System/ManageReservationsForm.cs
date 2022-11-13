@@ -16,5 +16,10 @@ namespace Hotel_Management_System
         {
             InitializeComponent();
         }
+
+        private void ManageReservationsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

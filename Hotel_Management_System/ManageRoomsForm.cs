@@ -151,6 +151,16 @@ namespace Hotel_Management_System
             }
         }
 
+        private void comboBoxRoomType_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void buttonB_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main_Form mform = new Main_Form();
+            mform.Show();
+        }
     }
 }

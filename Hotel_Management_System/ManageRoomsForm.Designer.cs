@@ -47,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonB = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,6 +75,7 @@
             this.comboBoxRoomType.Name = "comboBoxRoomType";
             this.comboBoxRoomType.Size = new System.Drawing.Size(200, 24);
             this.comboBoxRoomType.TabIndex = 27;
+            this.comboBoxRoomType.SelectedIndexChanged += new System.EventHandler(this.comboBoxRoomType_SelectedIndexChanged);
             // 
             // buttonClear
             // 
@@ -272,11 +274,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Room";
             // 
+            // buttonB
+            // 
+            this.buttonB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonB.Location = new System.Drawing.Point(161, 524);
+            this.buttonB.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonB.Name = "buttonB";
+            this.buttonB.Size = new System.Drawing.Size(97, 28);
+            this.buttonB.TabIndex = 29;
+            this.buttonB.Text = "Back";
+            this.buttonB.UseVisualStyleBackColor = true;
+            this.buttonB.Click += new System.EventHandler(this.buttonB_Click);
+            // 
             // ManageRoomsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 608);
+            this.ClientSize = new System.Drawing.Size(1545, 956);
+            this.Controls.Add(this.buttonB);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBoxRoomType);
             this.Controls.Add(this.buttonClear);
@@ -329,5 +344,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonB;
     }
 }

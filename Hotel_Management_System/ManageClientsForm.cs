@@ -141,5 +141,12 @@ namespace Hotel_Management_System
             textBoxCountry.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
 
         }
+
+        private void buttonB_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main_Form mform = new Main_Form();
+            mform.Show();
+        }
     }
 }

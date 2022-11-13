@@ -26,6 +26,19 @@ namespace Hotel_Management_System
             return table;
         }
 
+        // function to get room's by type
+        public DataTable roomByType(int type)
+        {
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `rooms` WHERE `type`=@typ", conn.getConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            return table;
+        }
+
         //function to add new room
 
         public bool addRoom(int number, int type, String phone, String free)
@@ -70,7 +83,7 @@ namespace Hotel_Management_System
             return table;
         }
 
-        //function to delete the selected room
+        //function to edit the selected room
 
         public bool editRoom(int number, int type, String phone, String free)
         {

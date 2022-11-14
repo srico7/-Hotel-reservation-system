@@ -57,14 +57,16 @@ namespace Hotel_Management_System
 
 
 
-        // function to get room free column to no
-        public bool setRoomFreeToNo(int number)
+        // function to get room free column to no or yes
+        public bool setRoomFree(int number, String Yes_or_No)
         {
-            MySqlCommand command = new MySqlCommand("UPDATE `rooms` SET `free`='No' WHERE `number`=@num", conn.getConnection());
+            MySqlCommand command = new MySqlCommand("UPDATE `rooms` SET `free`=@yes_no WHERE `number`=@num", conn.getConnection());
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataTable table = new DataTable();
 
             command.Parameters.Add("@num", MySqlDbType.Int32).Value = number;
+            command.Parameters.Add("@yes_no", MySqlDbType.VarChar).Value = Yes_or_No;
+
 
             conn.openConnection();
 

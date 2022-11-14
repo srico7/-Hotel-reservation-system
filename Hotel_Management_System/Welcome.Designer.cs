@@ -34,7 +34,7 @@
             // 
             // WelcomeButton
             // 
-            this.WelcomeButton.Location = new System.Drawing.Point(571, 390);
+            this.WelcomeButton.Location = new System.Drawing.Point(178, 154);
             this.WelcomeButton.Name = "WelcomeButton";
             this.WelcomeButton.Size = new System.Drawing.Size(410, 95);
             this.WelcomeButton.TabIndex = 0;
@@ -48,19 +48,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(447, 169);
+            this.textBox1.Location = new System.Drawing.Point(248, 148);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(695, 140);
+            this.textBox1.Size = new System.Drawing.Size(0, 0);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "Hotel Reservation System";
             // 
             // Welcome
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1545, 782);
+            this.ClientSize = new System.Drawing.Size(800, 550);
+            this.ControlBox = false;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.WelcomeButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Welcome";
             this.Text = "Welcome";
             this.ResumeLayout(false);

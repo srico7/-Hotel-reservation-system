@@ -80,7 +80,7 @@ namespace Hotel_Management_System
                     {
                         // set the room free column to NO
                         // you can add a message if the room is edited
-                        room.setRoomFreeToNo(roomNumber, "No");
+                        room.setRoomFree(roomNumber, "No");
                         dataGridView1.DataSource = reservation.getAllReserve();
                         MessageBox.Show("New Reservation Added", "Add Reservation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -127,7 +127,7 @@ namespace Hotel_Management_System
                     {
                         // set the room free column to NO
                         // you can add a message if the room is edited
-                        room.setRoomFreeToNo(roomNumber, "No");
+                        room.setRoomFree(roomNumber, "No");
                         dataGridView1.DataSource = reservation.getAllReserve();
                         MessageBox.Show("Reservation Data Updated", "Edit Reservation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -157,7 +157,7 @@ namespace Hotel_Management_System
                     dataGridView1.DataSource = reservation.getAllReserve();
                     // after deleting a reservation we need to set free column to 'Yes'
 
-                    room.setRoomFreeToNo(roomNumber, "Yes");
+                    room.setRoomFree(roomNumber, "Yes");
                     MessageBox.Show("Reservation Deleted", "Delete Reservation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }

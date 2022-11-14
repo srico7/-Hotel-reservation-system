@@ -26,17 +26,61 @@ namespace Hotel_Management_System
             return table;
         }
 
-        // function to get room's by type
         public DataTable roomByType(int type)
         {
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `rooms` WHERE `type`=@typ", conn.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `rooms` WHERE 'type'=@typ and free='Yes'", conn.getConnection());
             MySqlDataAdapter adapter = new MySqlDataAdapter();
             DataTable table = new DataTable();
+
+            command.Parameters.Add("@typ", MySqlDbType.Int32).Value = type;
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
             return table;
+        }
+
+        //function to return room type id
+        public int getRoomType(int number)
+        {
+            MySqlCommand command = new MySqlCommand("SELECT `type` FROM `rooms` WHERE `number`=@num", conn.getConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+
+            command.Parameters.Add("@num", MySqlDbType.Int32).Value = number;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            return Convert.ToInt32(table.Rows[0][0].ToString());
+        }
+
+
+
+        // function to get room free column to no
+        public bool setRoomFreeToNo(int number)
+        {
+            MySqlCommand command = new MySqlCommand("UPDATE `rooms` SET `free`='No' WHERE `number`=@num", conn.getConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+
+            command.Parameters.Add("@num", MySqlDbType.Int32).Value = number;
+
+            conn.openConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                conn.closeConnection();
+                return true;
+            }
+            else
+            {
+                conn.closeConnection();
+                return false;
+            }
+
+            
+            
         }
 
         //function to add new room

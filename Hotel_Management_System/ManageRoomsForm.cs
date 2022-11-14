@@ -75,11 +75,11 @@ namespace Hotel_Management_System
                 int number = Convert.ToInt32(textBoxNumber.Text);
                 if (radioButton1YES.Checked)
                 {
-                    free = "YES";
+                    free = "Yes";
                 }
                 else if (radioButtonNO.Checked)
                 {
-                    free = "NO";
+                    free = "No";
                 }
                 if (room.editRoom(number, type, phone, free))
                 {

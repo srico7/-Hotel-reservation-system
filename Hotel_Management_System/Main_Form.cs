@@ -42,5 +42,10 @@ namespace Hotel_Management_System
             manageRSF.Show();
             this.Hide();
         }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

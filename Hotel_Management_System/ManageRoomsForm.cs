@@ -162,5 +162,10 @@ namespace Hotel_Management_System
             Main_Form mform = new Main_Form();
             mform.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

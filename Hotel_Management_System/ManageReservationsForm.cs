@@ -212,5 +212,17 @@ namespace Hotel_Management_System
             textBoxReserveID.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
         }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main_Form mform = new Main_Form();
+            mform.Show();
+        }
     }
 }

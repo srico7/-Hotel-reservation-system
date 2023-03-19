@@ -1,15 +1,13 @@
 # -Hotel-reservation-system
  hotel reservation system in c#
 
- Study The whole project and do you'r part -
-
- WHAT WE ARE GONNA USE TO BUILD THIS C# PROJECT:
+ WHAT I USED TO BUILD THIS C# .NET PROJECT:
  - C# Programming Language.
  - Visual Studio Editor.
  - MySQL Database.
  - XAMPP Server.
 
- C# CONTROLS WE WILL USE IN THIS PROJECT:
+ C# CONTROLS USED IN THIS PROJECT:
 - Windows Form 
 - Panel.
 - DataGridView.
